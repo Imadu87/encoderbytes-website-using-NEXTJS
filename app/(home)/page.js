@@ -20,8 +20,5 @@ export default function MainPage() {
     <Cost />
     <Industry />
     <TestimonialSection />
-    <Contact />
-    <Footer />
-    <Copyright />
   </div>;
 }
