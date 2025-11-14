@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import logo from "@/public/images/logo.webp";
 import navItems from "./navbar-items";
 
 export default function Navbar() {
@@ -30,7 +29,7 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <Image
-            src={logo}
+            src="images/logo.webp"
             alt="Logo"
             width={190}
             height={190}
