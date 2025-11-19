@@ -25,7 +25,8 @@ export default function Navbar() {
     <>
       <nav
         className={`bg-[#1a1a1a] text-white h-20 w-full fixed left-0 z-50 transition-all duration-500
-  ${scrolled ? "top-0 shadow-md" : "top-8.5"}`}
+    ${scrolled ? "top-0 shadow-md" : "top-0 lg:top-8.5"}
+  `}
       >
         <div className="max-w-8xl mx-auto flex items-center justify-between h-full px-6 md:px-10 lg:px-14 xl:px-20 2xl:px-24">
           {/* Logo */}
