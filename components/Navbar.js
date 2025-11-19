@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/public/Images/logo.webp"
+import logo from "@/public/Images/logo.webp";
 import { Menu, X } from "lucide-react";
 import navItems from "./navbar-items";
 
@@ -24,45 +24,50 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`bg-[#1a1a1a] h-20 flex items-center justify-between px-6 md:px-16 text-white fixed left-0 w-full z-50 transition-all duration-500 top-0
-        ${scrolled ? "lg:top-0 shadow-md" : "lg:top-8.5"}`}
+        className={`bg-[#1a1a1a] text-white h-20 w-full fixed left-0 z-50 transition-all duration-500
+  ${scrolled ? "top-0 shadow-md" : "top-8.5"}`}
       >
-        {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <Image
-            src={logo}
-            alt="Logo"
-            width={190}
-            height={190}
-            className="object-contain"
-          />
-        </div>
+        <div className="max-w-8xl mx-auto flex items-center justify-between h-full px-6 md:px-10 lg:px-14 xl:px-20 2xl:px-24">
+          {/* Logo */}
+          <div className="flex items-center space-x-2">
+            <Image
+              src={logo}
+              alt="Logo"
+              width={170}
+              height={170}
+              className="object-contain"
+            />
+          </div>
 
-        {/* Desktop Navbar (lg and above) */}
-        <ul className="hidden lg:flex space-x-10 text-lg font-sm">
-          {navItems.map((item) => (
-            <li key={item.name}>
-              <Link href={item.href} className="hover:text-gray-300 transition">
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+          {/* Desktop Menu */}
+          <ul className="hidden lg:flex space-x-10 text-lg font-sm">
+            {navItems.map((item) => (
+              <li key={item.name}>
+                <Link
+                  href={item.href}
+                  className="hover:text-gray-300 transition"
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
-        {/* Desktop Contact Button */}
-        <div className="hidden lg:block">
-          <button className="px-4 py-2 rounded-lg border font-semibold hover:bg-blue-500 transition">
-            Contact Us
+          {/* Contact Us Button */}
+          <div className="hidden lg:block">
+            <button className="px-4 py-2 rounded-lg border font-semibold hover:bg-blue-500 transition">
+              Contact Us
+            </button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden text-white"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? <X size={30} /> : <Menu size={30} />}
           </button>
         </div>
-
-        {/* Mobile + Tablet Menu Button */}
-        <button
-          className="lg:hidden text-white"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <X size={30} /> : <Menu size={30} />}
-        </button>
       </nav>
 
       {/* Mobile + Tablet Dropdown Menu */}
