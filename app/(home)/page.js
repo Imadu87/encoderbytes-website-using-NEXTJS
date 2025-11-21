@@ -8,7 +8,7 @@ import StatsSection from "./components/StateSection";
 import TestimonialSection from "./components/Testimonals";
 
 export default function MainPage() {
-  return <div>
+  return <div >
     <Hero />
     <Solution />
     <StatsSection />

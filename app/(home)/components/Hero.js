@@ -7,53 +7,55 @@ export default function HeroSection() {
     <section
       className="
         relative 
-        h-[90vh] 
+        h-screen 
         lg:h-screen 
-        xl:h-[85vh] 
+        xl:h-[120vh]
         2xl:h-[75vh] 
         flex items-center 
         text-white 
-        mt-20
+        
       "
     >
-      {/* === Background Image === */}
       <Image
         src={hero}
         alt="Hero background"
         fill
-        className="
-          object-cover 
-          -z-10 
-          object-center 
-        "
+        className="object-cover -z-10 object-center"
         priority
       />
-
-      {/* === Text Content === */}
       <div
         className="
           px-6 md:px-16 
-          flex flex-col 
+          flex flex-col
+          tracking-tight leading-tight 
           text-center md:text-left 
           items-center md:items-start
-          max-w-3xl
+          max-w-3xl 
         "
       >
-        <p className="text-2xl md:text-xl xl:text-2xl tracking-widest mb-2">
+        <p className="text-2xl md:text-xl xl:text-2xl tracking-widest">
           a bespoke
         </p>
+        <h1
+          className="
+            uppercase font-bold 
+            leading-tight tracking-tight
+            text-5xl md:text-5xl xl:text-5xl 2xl:text-7xl
+          "
+        >
+          <span className="block md:hidden">SOFTWARE</span>
+          <span className="block md:hidden">DEVELOPMENT</span>
+          <span className="block md:hidden text-blue-500">company.</span>
 
-        {/* MAIN HEADING */}
-        <h1 className="uppercase font-bold leading-tight tracking-tight mb-4 text-4xl md:text-6xl xl:text-7xl 2xl:text-8xl">
-          <span className="whitespace-nowrap">SOFTWARE DEVELOPMENT</span>
-          <br />
-          <span className="text-blue-500">company.</span>
+          <span className="hidden md:inline">SOFTWARE DEVELOPMENT</span>
+
+          <span className="hidden md:block text-blue-500">company.</span>
         </h1>
 
         <p
           className="
-            text-lg md:text-xl xl:text-2xl 
-            mb-8 md:mb-10 
+            text-lg md:text-xl xl:text-xl 
+            mb-10 
             text-gray-200 
             max-w-2xl
           "
@@ -81,3 +83,5 @@ export default function HeroSection() {
     </section>
   );
 }
+
+

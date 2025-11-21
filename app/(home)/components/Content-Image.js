@@ -12,7 +12,7 @@ export default function ContentImage({
 }) {
   return (
     <div
-      className={`flex flex-col lg:flex-row gap-8 items-center lg:items-start ${
+      className={`flex flex-col lg:flex-row gap-8 items-center lg:items-center ${
         reverse ? "lg:flex-row-reverse" : ""
       }`}
     >
@@ -27,7 +27,7 @@ export default function ContentImage({
       </div>
 
       {/* Text Section */}
-      <div className="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left px-2 sm:px-6 md:py-12">
+      <div className="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left px-2 sm:px-6 md:py-0">
         <h3 className="text-xl sm:text-2xl font-semibold mb-2">{heading}</h3>
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug mb-4">
           {heading_1} <br />
