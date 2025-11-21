@@ -13,7 +13,7 @@ export default function Approaches() {
           "We at Encoderbytes follow every possible method to solve problems for our clients and help them in their businesses."
         }
       />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10 max-w-7xl mx-auto">
         {approachData.map((approach, index) => (
           <Card
             key={index}

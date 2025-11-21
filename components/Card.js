@@ -10,7 +10,7 @@ export default function Card({
 }) {
   return (
     <div
-      className="bg-white rounded-xl p-6 shadow-lg transition hover:scale-[1.02]"
+      className="bg-white rounded-xl p-6 shadow-lg transition hover:scale-[1.02] max-w-7xl mx-auto"
       style={{ width }}
     >
       <div className="flex justify-between items-start">

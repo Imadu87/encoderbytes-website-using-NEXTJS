@@ -8,9 +8,7 @@ export default function HeroSection() {
       className="
         relative 
         h-screen 
-        lg:h-screen 
-        xl:h-[120vh]
-        2xl:h-[75vh] 
+        max-h-[700px]
         flex items-center 
         text-white 
         

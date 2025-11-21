@@ -14,7 +14,7 @@ export default function Solution() {
         }
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 justify-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 justify-items-center max-w-7xl mx-auto">
         {cardData.map((card, index) => (
           <Card
             key={index}

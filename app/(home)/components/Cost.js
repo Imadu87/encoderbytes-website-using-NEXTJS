@@ -3,7 +3,7 @@ import cost from "@/public/Images/cost.jpg";
 
 export default function Cost() {
   return (
-    <div className="relative h-[40vh] md:h-[50vh] lg:h-[40vh] flex items-center justify-center text-white overflow-hidden">
+    <div className="relative h-[40vh] max-h-[700px] flex items-center justify-center text-white overflow-hidden">
       <Image
         src={cost}
         alt="Cost background"
@@ -18,7 +18,7 @@ export default function Cost() {
           flex flex-col md:flex-row
           items-center md:items-center
           text-center md:text-left
-          justify-between w-full max-w-6xl mx-auto
+          justify-between w-full max-w-7xl mx-auto
           gap-8
         "
       >
